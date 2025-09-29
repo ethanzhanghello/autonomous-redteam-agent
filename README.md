@@ -1,132 +1,78 @@
-# Autonomous Red-Team Agent (Lab-Only)
+# Autonomous Red-Team Agent
 
-A comprehensive autonomous red-team simulation system that performs safe reconnaissance, vulnerability analysis, and generates prioritized remediation recommendations using AI agents and a Neo4j knowledge graph.
+A lab-only autonomous red-team simulation tool for evaluating security defenses. This project demonstrates automated vulnerability assessment using AI agents and knowledge graphs.
+
+## ⚠️ Lab-Only Usage
+
+**This tool is designed exclusively for lab environments.** It includes safety controls to prevent scanning outside designated networks.
 
 ## Features
 
-- **AI-Powered Agents**: LangChain-based Recon, Intel, and Defender agents with OpenAI integration
-- **Real Vulnerability Matching**: Neo4j knowledge graph with 15+ realistic CVEs and product relationships
-- **Safe Scanning**: Rate-limited, allowlist-enforced nmap scanning with comprehensive safety controls
-- **Structured Audit Logging**: Complete audit trail with JSON logging for compliance
-- **Prioritized Remediation**: CVSS + EPSS + KEV scoring for actionable security tickets
-- **Lab-Only Safety**: All operations restricted to Docker lab networks (172.18.0.0/16)
+- **Safe Network Scanning**: Nmap-based reconnaissance with allowlist protection
+- **AI-Powered Analysis**: LangChain agents for intelligent vulnerability matching
+- **Knowledge Graph**: Neo4j database for vulnerability and asset data
+- **Prioritized Remediation**: Automated ticket generation with CVSS/EPSS scoring
+- **Audit Logging**: Comprehensive activity tracking for compliance
 
-## Quickstart
+## Quick Start
 
-1) **Install dependencies:**
+1. **Setup Environment**:
    ```bash
+   # Install dependencies
    pip install -r requirements.txt
+   
+   # Set up environment variables
+   cp .env.example .env
+   # Edit .env with your OpenAI API key
    ```
 
-2) **Start lab services:**
+2. **Start Lab Infrastructure**:
    ```bash
-   make up
+   make up          # Start Neo4j and OWASP Juice Shop
+   make seed_kg     # Load vulnerability data
    ```
 
-3) **Apply schema and seed comprehensive data:**
+3. **Run Demo Campaign**:
    ```bash
-   make schema && make seed_all
-   ```
-
-4) **Run autonomous campaign (dry-run):**
-   ```bash
-   make demo
-   ```
-
-5) **Run real scanning (requires nmap):**
-   ```bash
-   python3 -m redteam_agent.agents.orchestrator --config redteam_agent/demo/demo_config.json
+   make demo        # Run dry-run campaign
    ```
 
 ## Architecture
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Recon Agent   │───▶│   Intel Agent   │───▶│ Defender Agent  │
-│  (LangChain +   │    │ (Neo4j Queries) │    │ (Prioritization)│
-│   Safe nmap)    │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│  Safety Guards  │    │  Neo4j Knowledge │    │  Report Gen      │
-│ (Rate limiting, │    │      Graph       │    │ (Tickets + MD)   │
-│  Allowlist)     │    │  (15+ CVEs)     │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-```
+The system uses a multi-agent approach:
 
-## Outputs
+- **Recon Agent**: Performs safe network scanning
+- **Intel Agent**: Matches findings against vulnerability database  
+- **Defender Agent**: Prioritizes vulnerabilities and generates tickets
+- **Orchestrator**: Coordinates the campaign workflow
 
-- **Campaign Reports**: `runs/{run_id}/report.md`
-- **Remediation Tickets**: `runs/{run_id}/tickets.json`
-- **Audit Logs**: `runs/{run_id}/audit.jsonl`
-- **Metadata**: `runs/{run_id}/metadata.json`
+## Safety Controls
 
-## Safety & Ethics
+- IP allowlist validation (default: 172.18.0.0/16)
+- Rate limiting on scan operations
+- Dry-run mode for testing
+- Comprehensive audit logging
 
-- **Lab-Only**: All scanning restricted to Docker networks (172.18.0.0/16)
-- **Rate Limited**: 2 requests/second maximum scanning rate
-- **Audit Logged**: Every action logged with timestamps and details
-- **Dry-Run Default**: Safe simulation mode by default
-- **Allowlist Enforced**: Targets outside allowlist immediately blocked
-
-## Data Sources
-
-- **Comprehensive CVE Dataset**: 15 realistic vulnerabilities with CVSS, EPSS, KEV flags
-- **Product Relationships**: nginx, Apache, OpenSSH, WordPress, Redis, Jenkins, Docker, Elasticsearch, MongoDB, GitLab, Node.js, Django, PHP, Kubernetes
-- **Sample Assets**: Pre-configured lab assets with known software versions
-
-## Commands
+## Development
 
 ```bash
-# Infrastructure
-make up              # Start Neo4j + Juice Shop
-make schema          # Apply Neo4j constraints/indexes
-make seed_all        # Ingest vulnerabilities + sample assets
+# Run tests
+make test
 
-# Campaigns  
-make demo            # Dry-run autonomous campaign
-python3 -m redteam_agent.agents.orchestrator --config redteam_agent/demo/demo_config.json --dry-run
+# Code formatting
+make format
 
-# Data Management
-python3 -m redteam_agent.etl.ingest --file redteam_agent/data/feeds/comprehensive_vulns.json
-python3 -m redteam_agent.etl.ingest --seed-assets
+# Linting
+make lint
 ```
 
-## Example Output
+## Known Issues
 
-**Vulnerability Found:**
-- CVE-2023-12345: Remote code execution in nginx 1.22.0 (CVSS: 9.8, EPSS: 0.89, KEV: true)
-- Priority Score: 118.7 (KEV + CVSS + EPSS weighted)
-
-**Remediation Ticket:**
-```json
-{
-  "id": "CVE-2023-12345",
-  "priority": 118.7,
-  "title": "Remediate CVE-2023-12345", 
-  "evidence": ["Asset web-01 runs nginx 1.22.0"],
-  "remediation": "Update to the latest vendor-supported version; apply security patches."
-}
-```
-
-## Environment Variables
-
-```bash
-NEO4J_URI=bolt://localhost:7687
-NEO4J_USER=neo4j
-NEO4J_PASS=test12345
-ALLOWLIST_CIDR=172.18.0.0/16
-OPENAI_API_KEY=sk-...
-SIMULATION_ONLY=true
-MAX_CONCURRENCY=4
-```
+- Neo4j connection handling needs improvement
+- Rate limiting could be more sophisticated
+- Test coverage needs expansion
+- Performance optimization needed for large datasets
 
 ## Contributing
 
-This is a lab-only security research tool. All scanning is restricted to controlled environments. Never use against systems you don't own.
-
-## License
-
-MIT License - See LICENSE file for details.
-
+This is a learning project. Feel free to submit issues or improvements!
