@@ -1,0 +1,13 @@
+{
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2024-0001",
+      "summary": "Sample vuln in example product",
+      "cvss_v3": 7.5,
+      "epss": 0.45,
+      "kev": false,
+      "published_date": "2024-01-01"
+    }
+  ]
+}
+

@@ -1,0 +1,236 @@
+{
+  "vulnerabilities": [
+    {
+      "cve_id": "CVE-2024-0001",
+      "summary": "Sample vuln in example product",
+      "cvss_v3": 7.5,
+      "epss": 0.45,
+      "kev": false,
+      "published_date": "2024-01-01"
+    },
+    {
+      "cve_id": "CVE-2023-12345",
+      "summary": "Remote code execution in nginx 1.22.0 through improper request handling",
+      "cvss_v3": 9.8,
+      "epss": 0.89,
+      "kev": true,
+      "published_date": "2023-12-15",
+      "products": [
+        {
+          "name": "nginx",
+          "vendor": "nginx",
+          "cpe": "cpe:2.3:a:nginx:nginx:1.22.0:*:*:*:*:*:*:*",
+          "versions": ["1.22.0", "1.22.1", "1.21.6"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12346",
+      "summary": "SQL injection vulnerability in Apache HTTP Server 2.4.57",
+      "cvss_v3": 8.1,
+      "epss": 0.67,
+      "kev": false,
+      "published_date": "2023-11-20",
+      "products": [
+        {
+          "name": "Apache HTTP Server",
+          "vendor": "Apache Software Foundation",
+          "cpe": "cpe:2.3:a:apache:http_server:2.4.57:*:*:*:*:*:*:*",
+          "versions": ["2.4.57", "2.4.56"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12347",
+      "summary": "Buffer overflow in OpenSSH 9.3p1 allows privilege escalation",
+      "cvss_v3": 7.8,
+      "epss": 0.34,
+      "kev": true,
+      "published_date": "2023-10-10",
+      "products": [
+        {
+          "name": "OpenSSH",
+          "vendor": "OpenBSD",
+          "cpe": "cpe:2.3:a:openbsd:openssh:9.3:p1:*:*:*:*:*:*",
+          "versions": ["9.3p1", "9.2p1"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12348",
+      "summary": "Cross-site scripting (XSS) in WordPress 6.3.2",
+      "cvss_v3": 6.1,
+      "epss": 0.23,
+      "kev": false,
+      "published_date": "2023-09-15",
+      "products": [
+        {
+          "name": "WordPress",
+          "vendor": "WordPress Foundation",
+          "cpe": "cpe:2.3:a:wordpress:wordpress:6.3.2:*:*:*:*:*:*:*",
+          "versions": ["6.3.2", "6.3.1", "6.2.5"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12349",
+      "summary": "Denial of service in Redis 7.0.12 through malformed commands",
+      "cvss_v3": 5.3,
+      "epss": 0.12,
+      "kev": false,
+      "published_date": "2023-08-22",
+      "products": [
+        {
+          "name": "Redis",
+          "vendor": "Redis Ltd",
+          "cpe": "cpe:2.3:a:redis:redis:7.0.12:*:*:*:*:*:*:*",
+          "versions": ["7.0.12", "7.0.11"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12350",
+      "summary": "Authentication bypass in Jenkins 2.401.3",
+      "cvss_v3": 8.5,
+      "epss": 0.78,
+      "kev": true,
+      "published_date": "2023-07-30",
+      "products": [
+        {
+          "name": "Jenkins",
+          "vendor": "Jenkins",
+          "cpe": "cpe:2.3:a:jenkins:jenkins:2.401.3:*:*:*:*:*:*:*",
+          "versions": ["2.401.3", "2.401.2", "2.400.1"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12351",
+      "summary": "Path traversal vulnerability in Docker Desktop 4.20.0",
+      "cvss_v3": 7.2,
+      "epss": 0.45,
+      "kev": false,
+      "published_date": "2023-06-18",
+      "products": [
+        {
+          "name": "Docker Desktop",
+          "vendor": "Docker Inc",
+          "cpe": "cpe:2.3:a:docker:docker_desktop:4.20.0:*:*:*:*:*:*:*",
+          "versions": ["4.20.0", "4.19.0"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12352",
+      "summary": "Remote code execution in Elasticsearch 8.8.0",
+      "cvss_v3": 9.1,
+      "epss": 0.82,
+      "kev": true,
+      "published_date": "2023-05-25",
+      "products": [
+        {
+          "name": "Elasticsearch",
+          "vendor": "Elastic",
+          "cpe": "cpe:2.3:a:elastic:elasticsearch:8.8.0:*:*:*:*:*:*:*",
+          "versions": ["8.8.0", "8.7.1", "8.6.2"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12353",
+      "summary": "Information disclosure in MongoDB 6.0.6",
+      "cvss_v3": 4.9,
+      "epss": 0.18,
+      "kev": false,
+      "published_date": "2023-04-12",
+      "products": [
+        {
+          "name": "MongoDB",
+          "vendor": "MongoDB Inc",
+          "cpe": "cpe:2.3:a:mongodb:mongodb:6.0.6:*:*:*:*:*:*:*",
+          "versions": ["6.0.6", "6.0.5", "5.3.0"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12354",
+      "summary": "Command injection in GitLab 15.11.4",
+      "cvss_v3": 8.8,
+      "epss": 0.71,
+      "kev": true,
+      "published_date": "2023-03-08",
+      "products": [
+        {
+          "name": "GitLab",
+          "vendor": "GitLab Inc",
+          "cpe": "cpe:2.3:a:gitlab:gitlab:15.11.4:*:*:*:*:*:*:*",
+          "versions": ["15.11.4", "15.11.3", "15.10.5"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12355",
+      "summary": "Memory corruption in Node.js 18.16.0",
+      "cvss_v3": 6.5,
+      "epss": 0.29,
+      "kev": false,
+      "published_date": "2023-02-14",
+      "products": [
+        {
+          "name": "Node.js",
+          "vendor": "Node.js Foundation",
+          "cpe": "cpe:2.3:a:nodejs:node.js:18.16.0:*:*:*:*:*:*:*",
+          "versions": ["18.16.0", "18.15.0", "16.20.0"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12356",
+      "summary": "Cross-site request forgery in Django 4.1.7",
+      "cvss_v3": 5.4,
+      "epss": 0.15,
+      "kev": false,
+      "published_date": "2023-01-30",
+      "products": [
+        {
+          "name": "Django",
+          "vendor": "Django Software Foundation",
+          "cpe": "cpe:2.3:a:djangoproject:django:4.1.7:*:*:*:*:*:*:*",
+          "versions": ["4.1.7", "4.1.6", "4.0.10"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12357",
+      "summary": "Arbitrary file upload in PHP 8.1.25",
+      "cvss_v3": 7.5,
+      "epss": 0.41,
+      "kev": false,
+      "published_date": "2023-01-15",
+      "products": [
+        {
+          "name": "PHP",
+          "vendor": "PHP Group",
+          "cpe": "cpe:2.3:a:php:php:8.1.25:*:*:*:*:*:*:*",
+          "versions": ["8.1.25", "8.1.24", "8.0.30"]
+        }
+      ]
+    },
+    {
+      "cve_id": "CVE-2023-12358",
+      "summary": "Privilege escalation in Kubernetes 1.25.8",
+      "cvss_v3": 8.1,
+      "epss": 0.63,
+      "kev": true,
+      "published_date": "2022-12-20",
+      "products": [
+        {
+          "name": "Kubernetes",
+          "vendor": "Cloud Native Computing Foundation",
+          "cpe": "cpe:2.3:a:kubernetes:kubernetes:1.25.8:*:*:*:*:*:*:*",
+          "versions": ["1.25.8", "1.25.7", "1.24.12"]
+        }
+      ]
+    }
+  ]
+}

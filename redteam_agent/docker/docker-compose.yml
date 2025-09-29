@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  neo4j:
+    image: neo4j:5.12
+    environment:
+      - NEO4J_AUTH=neo4j/test12345
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - redteam_net
+
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+    networks:
+      - redteam_net
+
+volumes:
+  neo4j_data:
+
+networks:
+  redteam_net:
+    driver: bridge
+
