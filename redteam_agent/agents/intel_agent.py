@@ -59,6 +59,9 @@ class IntelAgent:
         """Analyze service fingerprints and match to vulnerabilities."""
         results = []
         
+        # TODO: Add caching for repeated queries
+        # FIXME: This is inefficient for large fingerprint sets
+        
         for fp in fingerprints:
             target = fp.get("target")
             parsed_data = fp.get("parsed", {})
