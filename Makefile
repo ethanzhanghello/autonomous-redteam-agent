@@ -15,7 +15,7 @@ demo:
 
 # Testing (simplified)
 test:
-	pytest tests/ -v
+	python3 -m pytest tests/ -v
 
 # Code Quality (basic)
 lint:
