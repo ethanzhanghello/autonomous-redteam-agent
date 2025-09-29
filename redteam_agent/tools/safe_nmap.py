@@ -92,6 +92,10 @@ def safe_nmap_scan(target_ip: str, ports: str = "1-1024", dry_run: bool = True,
         # TODO: Add progress reporting for long scans
         output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, timeout=60)
         raw_output = output.decode("utf-8")
+        
+        # Debug: print raw output for troubleshooting
+        # print(f"DEBUG: Raw nmap output for {target_ip}: {raw_output[:200]}...")
+        
         parsed = parse_nmap_output(raw_output)
         
         if audit_logger:
