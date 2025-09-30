@@ -1,4 +1,4 @@
-.PHONY: up seed_kg ingest demo test lint format clean
+.PHONY: up seed_kg ingest demo test lint format clean api frontend dev
 
 # Infrastructure
 up:
@@ -23,6 +23,21 @@ lint:
 
 format:
 	black redteam_agent/ tests/
+
+# API Server
+api:
+	python3 api/main.py
+
+# Frontend Development
+frontend:
+	npm run dev
+
+# Full-stack development
+dev:
+	@echo "Starting full-stack development..."
+	@echo "Backend API: http://localhost:8000"
+	@echo "Frontend UI: http://localhost:5173"
+	@echo "Run 'make api' in one terminal and 'make frontend' in another"
 
 # Cleanup
 clean:
