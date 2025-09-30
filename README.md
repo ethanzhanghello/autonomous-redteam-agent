@@ -63,24 +63,24 @@ A lab-only autonomous red-team simulation tool with a modern web interface for e
 The system uses a sophisticated multi-agent architecture with a modern web interface:
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   React UI      │───▶│   FastAPI       │───▶│   AI Agents     │
-│                 │    │                 │    │                 │
-│ • Dashboard     │    │ • REST API      │    │ • Recon Agent   │
-│ • Campaigns     │    │ • SSE Events    │    │ • Intel Agent   │
+┌──────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   React UI       │───▶│   FastAPI       │───▶│   AI Agents     │
+│                  │    │                 │    │                 │
+│ • Dashboard      │    │ • REST API      │    │ • Recon Agent   │
+│ • Campaigns      │    │ • SSE Events    │    │ • Intel Agent   │
 │ • Knowledge Graph│    │ • WebSocket     │    │ • Defender Agent│
-│ • Reports       │    │ • File Downloads│    │ • Orchestrator  │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+│ • Reports        │    │ • File Downloads│    │ • Orchestrator  │
+└──────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
          └───────────────────────┼───────────────────────┘
                                  │
-                    ┌─────────────────┐
-                    │   Neo4j KG      │
-                    │                 │
+                    ┌──────────────────┐
+                    │   Neo4j KG       │
+                    │                  │
                     │ • Vulnerabilities│
-                    │ • Assets        │
-                    │ • Relationships │
-                    └─────────────────┘
+                    │ • Assets         │
+                    │ • Relationships  │
+                    └──────────────────┘
 ```
 
 ### Components
