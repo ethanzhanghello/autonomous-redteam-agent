@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Red-Team Agent - Portfolio Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .code-block {
+            background: #2d3748;
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        .tech-badge {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .feature-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Autonomous Red-Team Agent</h1>
+            <p class="text-xl mb-8 opacity-90">Full-Stack Cybersecurity Simulation Platform</p>
+            <div class="flex justify-center space-x-4 mb-8">
+                <a href="https://github.com/ethanzhanghello/autonomous-redteam-agent" target="_blank" 
+                   class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    View on GitHub
+                </a>
+                <a href="#demo" 
+                   class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors">
+                    View Demo
+                </a>
+            </div>
+            <div class="flex justify-center flex-wrap gap-2">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">Neo4j</span>
+                <span class="tech-badge">LangChain</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">TailwindCSS</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Project Overview</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-700">What It Does</h3>
+                        <p class="text-gray-600 mb-4">
+                            An autonomous red-team simulation platform that automates vulnerability assessment 
+                            using AI agents and knowledge graphs. Built for lab environments with comprehensive 
+                            safety controls.
+                        </p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Safe network scanning with Nmap wrappers</li>
+                            <li>• AI-powered vulnerability correlation</li>
+                            <li>• Real-time campaign monitoring</li>
+                            <li>• Interactive knowledge graph visualization</li>
+                            <li>• Automated remediation ticket generation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-gray-700">Key Features</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Multi-agent architecture with LangChain</li>
+                            <li>• Real-time event streaming with SSE</li>
+                            <li>• Modern React dashboard with TypeScript</li>
+                            <li>• FastAPI backend with comprehensive APIs</li>
+                            <li>• Neo4j knowledge graph for threat intelligence</li>
+                            <li>• Docker-based lab environment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Diagram -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">System Architecture</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Frontend -->
+                        <div class="text-center">
+                            <div class="bg-blue-100 rounded-lg p-6 mb-4">
+                                <h3 class="text-lg font-semibold text-blue-800 mb-2">React Frontend</h3>
+                                <ul class="text-sm text-blue-700 space-y-1">
+                                    <li>Dashboard & KPIs</li>
+                                    <li>Campaign Management</li>
+                                    <li>Knowledge Graph</li>
+                                    <li>Reports & Settings</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Backend -->
+                        <div class="text-center">
+                            <div class="bg-green-100 rounded-lg p-6 mb-4">
+                                <h3 class="text-lg font-semibold text-green-800 mb-2">FastAPI Backend</h3>
+                                <ul class="text-sm text-green-700 space-y-1">
+                                    <li>RESTful APIs</li>
+                                    <li>Server-Sent Events</li>
+                                    <li>Campaign Management</li>
+                                    <li>File Downloads</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Agents -->
+                        <div class="text-center">
+                            <div class="bg-purple-100 rounded-lg p-6 mb-4">
+                                <h3 class="text-lg font-semibold text-purple-800 mb-2">AI Agents</h3>
+                                <ul class="text-sm text-purple-700 space-y-1">
+                                    <li>Recon Agent</li>
+                                    <li>Intel Agent</li>
+                                    <li>Defender Agent</li>
+                                    <li>Orchestrator</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Knowledge Graph -->
+                    <div class="text-center mt-8">
+                        <div class="bg-orange-100 rounded-lg p-6 inline-block">
+                            <h3 class="text-lg font-semibold text-orange-800 mb-2">Neo4j Knowledge Graph</h3>
+                            <p class="text-sm text-orange-700">Vulnerabilities • Assets • Relationships</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Implementation -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Technical Implementation</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Frontend Code -->
+                    <div class="feature-card bg-gray-900 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-4">Frontend: React + TypeScript</h3>
+                        <div class="code-block">
+                            <pre><code class="language-typescript">// Real-time event streaming with SSE
+const useRunStore = create&lt;RunState&gt;((set, get) => ({
+  events: [],
+  async startRun(cfg: CampaignConfig) {
+    const res = await fetch("/api/campaigns", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cfg)
+    });
+    const { run_id } = await res.json();
+    set({ currentRunId: run_id, events: [], isRunning: true });
+    get().connectEvents(run_id);
+  },
+  
+  connectEvents(runId: string) {
+    const es = new EventSource(`/api/campaigns/${runId}/events`);
+    es.onmessage = (e) => {
+      const event = JSON.parse(e.data);
+      set(state => ({ 
+        events: [...state.events, event].slice(-1000)
+      }));
+    };
+  }
+}));</code></pre>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Code -->
+                    <div class="feature-card bg-gray-900 rounded-lg p-6">
+                        <h3 class="text-xl font-semibold text-white mb-4">Backend: FastAPI + SSE</h3>
+                        <div class="code-block">
+                            <pre><code class="language-python"># Server-Sent Events for real-time updates
+async def event_stream(run_id: str):
+    """Generate Server-Sent Events for campaign."""
+    event_queue = event_queues[run_id]
+    
+    while True:
+        try:
+            if campaign_status[run_id]['status'] == 'completed':
+                yield f"data: {json.dumps(final_event)}\n\n"
+                break
+                
+            try:
+                event = event_queue.get_nowait()
+                yield f"data: {json.dumps(event)}\n\n"
+            except queue.Empty:
+                await asyncio.sleep(1)
+                
+        except Exception as e:
+            break
+
+@app.get("/api/campaigns/{run_id}/events")
+async def get_campaign_events(run_id: str):
+    return StreamingResponse(event_stream(run_id), 
+                           media_type="text/event-stream")</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Key Features</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="feature-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-blue-600 text-3xl mb-4">🤖</div>
+                        <h3 class="text-xl font-semibold mb-3">AI-Powered Agents</h3>
+                        <p class="text-gray-600">Multi-agent system using LangChain for intelligent vulnerability analysis and correlation.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-green-600 text-3xl mb-4">📊</div>
+                        <h3 class="text-xl font-semibold mb-3">Real-time Monitoring</h3>
+                        <p class="text-gray-600">Live event streaming with Server-Sent Events for real-time campaign monitoring.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-purple-600 text-3xl mb-4">🕸️</div>
+                        <h3 class="text-xl font-semibold mb-3">Knowledge Graph</h3>
+                        <p class="text-gray-600">Interactive Neo4j visualization showing asset-vulnerability relationships.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-red-600 text-3xl mb-4">🛡️</div>
+                        <h3 class="text-xl font-semibold mb-3">Safety Controls</h3>
+                        <p class="text-gray-600">Comprehensive safety measures including allowlists, rate limiting, and audit logging.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-orange-600 text-3xl mb-4">📱</div>
+                        <h3 class="text-xl font-semibold mb-3">Modern UI</h3>
+                        <p class="text-gray-600">Responsive React dashboard with TailwindCSS and professional UX design.</p>
+                    </div>
+                    
+                    <div class="feature-card bg-white rounded-lg p-6 shadow-lg">
+                        <div class="text-indigo-600 text-3xl mb-4">🔧</div>
+                        <h3 class="text-xl font-semibold mb-3">Full-Stack API</h3>
+                        <p class="text-gray-600">Comprehensive FastAPI backend with RESTful endpoints and file downloads.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Development Process</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">1</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Frontend Setup</h3>
+                            <p class="text-gray-600">Initialized React TypeScript project with TailwindCSS, routing, and state management.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">2</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">UI Development</h3>
+                            <p class="text-gray-600">Built dashboard, campaigns, knowledge graph, reports, and settings pages with real-time features.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">3</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Backend Integration</h3>
+                            <p class="text-gray-600">Developed FastAPI backend with SSE streaming and integrated with existing Python agents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">4</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Testing & Polish</h3>
+                            <p class="text-gray-600">Added error handling, loading states, responsive design, and comprehensive testing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Technologies Used</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Frontend</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">React 18</span>
+                                <span class="text-sm text-gray-500">UI Framework</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">TypeScript</span>
+                                <span class="text-sm text-gray-500">Type Safety</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">TailwindCSS</span>
+                                <span class="text-sm text-gray-500">Styling</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Zustand</span>
+                                <span class="text-sm text-gray-500">State Management</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">React Router</span>
+                                <span class="text-sm text-gray-500">Navigation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Backend & Infrastructure</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">FastAPI</span>
+                                <span class="text-sm text-gray-500">API Framework</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Neo4j</span>
+                                <span class="text-sm text-gray-500">Graph Database</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">LangChain</span>
+                                <span class="text-sm text-gray-500">AI Framework</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Docker</span>
+                                <span class="text-sm text-gray-500">Containerization</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Python</span>
+                                <span class="text-sm text-gray-500">Backend Language</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Live Demo</h2>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-gray-100 rounded-lg p-8 mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Try It Out</h3>
+                    <p class="text-gray-600 mb-6">
+                        Experience the full-stack application with real-time campaign monitoring, 
+                        interactive knowledge graph, and comprehensive reporting.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-white rounded-lg p-4 shadow">
+                            <h4 class="font-semibold mb-2">Quick Start Commands</h4>
+                            <div class="code-block text-left">
+                                <pre><code class="language-bash"># Start the full-stack application
+make up          # Start Neo4j and lab environment
+make api         # Start FastAPI backend (Terminal 1)
+make frontend    # Start React frontend (Terminal 2)
+
+# Access the application
+Frontend: http://localhost:5173
+API Docs: http://localhost:8000/docs
+Neo4j: http://localhost:7474</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 rounded-lg p-6">
+                        <h4 class="font-semibold text-blue-800 mb-2">Dashboard</h4>
+                        <p class="text-sm text-blue-700">Monitor KPIs and start campaigns with real-time updates.</p>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-6">
+                        <h4 class="font-semibold text-green-800 mb-2">Knowledge Graph</h4>
+                        <p class="text-sm text-green-700">Explore asset-vulnerability relationships interactively.</p>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg p-6">
+                        <h4 class="font-semibold text-purple-800 mb-2">Reports</h4>
+                        <p class="text-sm text-purple-700">View and download campaign reports and tickets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold mb-4">Ready to Explore?</h3>
+            <p class="text-lg mb-8 opacity-90">
+                This project demonstrates full-stack development skills with modern technologies 
+                and real-world cybersecurity applications.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://github.com/ethanzhanghello/autonomous-redteam-agent" target="_blank" 
+                   class="bg-white text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    View Source Code
+                </a>
+                <a href="mailto:your-email@example.com" 
+                   class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors">
+                    Contact Me
+                </a>
+            </div>
+            <div class="mt-8 text-sm opacity-75">
+                <p>Built with ❤️ for cybersecurity education and lab environments only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate feature cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.feature-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>

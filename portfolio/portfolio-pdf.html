@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Red-Team Agent - Portfolio Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .tech-badge {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Cover Page -->
+    <div class="gradient-bg text-white py-16 px-8 min-h-screen flex flex-col justify-center">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold mb-6">Autonomous Red-Team Agent</h1>
+            <p class="text-2xl mb-8 opacity-90">Full-Stack Cybersecurity Simulation Platform</p>
+            <div class="flex justify-center flex-wrap gap-3 mb-12">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">Neo4j</span>
+                <span class="tech-badge">LangChain</span>
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">TailwindCSS</span>
+            </div>
+            <div class="text-lg opacity-75">
+                <p>Portfolio Project for Software Engineering Applications</p>
+                <p class="mt-2">GitHub: github.com/ethanzhanghello/autonomous-redteam-agent</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Project Overview -->
+    <div class="py-12 px-8">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">Project Overview</h2>
+        
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">What It Does</h3>
+            <p class="text-lg text-gray-600 mb-4">
+                An autonomous red-team simulation platform that automates vulnerability assessment 
+                using AI agents and knowledge graphs. Built for lab environments with comprehensive 
+                safety controls and real-time monitoring capabilities.
+            </p>
+            <ul class="text-lg text-gray-600 space-y-2 ml-6">
+                <li>• Safe network scanning with Nmap wrappers and allowlist controls</li>
+                <li>• AI-powered vulnerability correlation using LangChain agents</li>
+                <li>• Real-time campaign monitoring with Server-Sent Events</li>
+                <li>• Interactive knowledge graph visualization with Neo4j</li>
+                <li>• Automated remediation ticket generation and prioritization</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Key Features</h3>
+            <ul class="text-lg text-gray-600 space-y-2 ml-6">
+                <li>• Multi-agent architecture with LangChain for intelligent analysis</li>
+                <li>• Real-time event streaming with FastAPI Server-Sent Events</li>
+                <li>• Modern React dashboard with TypeScript and TailwindCSS</li>
+                <li>• Comprehensive FastAPI backend with RESTful endpoints</li>
+                <li>• Neo4j knowledge graph for threat intelligence correlation</li>
+                <li>• Docker-based lab environment with safety controls</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Technical Achievements</h3>
+            <ul class="text-lg text-gray-600 space-y-2 ml-6">
+                <li>• Full-stack development with modern web technologies</li>
+                <li>• Real-time data streaming and live updates</li>
+                <li>• AI integration for intelligent vulnerability analysis</li>
+                <li>• Graph database implementation for complex relationships</li>
+                <li>• Professional UX/UI design with responsive layouts</li>
+                <li>• Comprehensive API design with proper error handling</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Architecture -->
+    <div class="py-12 px-8">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">System Architecture</h2>
+        
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">High-Level Architecture</h3>
+            <div class="bg-gray-100 rounded-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="text-center">
+                        <div class="bg-blue-100 rounded-lg p-4 mb-2">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-2">React Frontend</h4>
+                            <ul class="text-sm text-blue-700 space-y-1">
+                                <li>Dashboard & KPIs</li>
+                                <li>Campaign Management</li>
+                                <li>Knowledge Graph</li>
+                                <li>Reports & Settings</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-green-100 rounded-lg p-4 mb-2">
+                            <h4 class="text-lg font-semibold text-green-800 mb-2">FastAPI Backend</h4>
+                            <ul class="text-sm text-green-700 space-y-1">
+                                <li>RESTful APIs</li>
+                                <li>Server-Sent Events</li>
+                                <li>Campaign Management</li>
+                                <li>File Downloads</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="bg-purple-100 rounded-lg p-4 mb-2">
+                            <h4 class="text-lg font-semibold text-purple-800 mb-2">AI Agents</h4>
+                            <ul class="text-sm text-purple-700 space-y-1">
+                                <li>Recon Agent</li>
+                                <li>Intel Agent</li>
+                                <li>Defender Agent</li>
+                                <li>Orchestrator</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-orange-100 rounded-lg p-4 inline-block">
+                        <h4 class="text-lg font-semibold text-orange-800 mb-2">Neo4j Knowledge Graph</h4>
+                        <p class="text-sm text-orange-700">Vulnerabilities • Assets • Relationships</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Data Flow</h3>
+            <ol class="text-lg text-gray-600 space-y-2 ml-6">
+                <li>1. User initiates campaign through React frontend</li>
+                <li>2. FastAPI backend receives request and starts orchestration</li>
+                <li>3. Recon Agent performs safe network scanning</li>
+                <li>4. Intel Agent queries Neo4j for vulnerability matches</li>
+                <li>5. Defender Agent prioritizes findings and generates tickets</li>
+                <li>6. Real-time updates streamed to frontend via SSE</li>
+                <li>7. Results displayed in interactive dashboard and knowledge graph</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Technical Implementation -->
+    <div class="py-12 px-8">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">Technical Implementation</h2>
+        
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Frontend: React + TypeScript</h3>
+            <div class="code-block mb-4">
+<pre><code>// Real-time event streaming with Server-Sent Events
+const useRunStore = create&lt;RunState&gt;((set, get) => ({
+  events: [],
+  async startRun(cfg: CampaignConfig) {
+    const res = await fetch("/api/campaigns", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cfg)
+    });
+    const { run_id } = await res.json();
+    set({ currentRunId: run_id, events: [], isRunning: true });
+    get().connectEvents(run_id);
+  },
+  
+  connectEvents(runId: string) {
+    const es = new EventSource(`/api/campaigns/${runId}/events`);
+    es.onmessage = (e) => {
+      const event = JSON.parse(e.data);
+      set(state => ({ 
+        events: [...state.events, event].slice(-1000)
+      }));
+    };
+  }
+}));</code></pre>
+            </div>
+            <p class="text-lg text-gray-600">
+                The frontend uses Zustand for state management and implements real-time event streaming 
+                with Server-Sent Events for live campaign monitoring.
+            </p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Backend: FastAPI + SSE</h3>
+            <div class="code-block mb-4">
+<pre><code># Server-Sent Events for real-time campaign updates
+async def event_stream(run_id: str):
+    """Generate Server-Sent Events for campaign."""
+    event_queue = event_queues[run_id]
+    
+    while True:
+        try:
+            if campaign_status[run_id]['status'] == 'completed':
+                yield f"data: {json.dumps(final_event)}\n\n"
+                break
+                
+            try:
+                event = event_queue.get_nowait()
+                yield f"data: {json.dumps(event)}\n\n"
+            except queue.Empty:
+                await asyncio.sleep(1)
+                
+        except Exception as e:
+            break
+
+@app.get("/api/campaigns/{run_id}/events")
+async def get_campaign_events(run_id: str):
+    return StreamingResponse(event_stream(run_id), 
+                           media_type="text/event-stream")</code></pre>
+            </div>
+            <p class="text-lg text-gray-600">
+                The backend implements comprehensive REST APIs with Server-Sent Events for real-time 
+                communication and integrates with the existing Python agent ecosystem.
+            </p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">AI Agents: LangChain Integration</h3>
+            <div class="code-block mb-4">
+<pre><code>class IntelAgent:
+    def __init__(self):
+        self.llm = ChatOpenAI(
+            model="gpt-4o-mini", 
+            temperature=0.1,
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
+        self.driver = GraphDatabase.driver(
+            self.neo4j_uri, 
+            auth=(self.neo4j_user, self.neo4j_pass)
+        )
+
+    def analyze_fingerprints(self, fingerprints):
+        """Analyze service fingerprints and match to vulnerabilities."""
+        results = []
+        for fp in fingerprints:
+            # Query Neo4j for asset-vulnerability relationships
+            # Process findings with AI-powered correlation
+            # Return prioritized vulnerability matches
+        return results</code></pre>
+            </div>
+            <p class="text-lg text-gray-600">
+                AI agents use LangChain for orchestration and integrate with Neo4j for intelligent 
+                vulnerability correlation and threat intelligence analysis.
+            </p>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Technologies & Skills -->
+    <div class="py-12 px-8">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">Technologies & Skills Demonstrated</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Frontend Technologies</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">React 18</span>
+                        <span class="text-sm text-gray-500">Modern UI Framework</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">TypeScript</span>
+                        <span class="text-sm text-gray-500">Type Safety & DX</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">TailwindCSS</span>
+                        <span class="text-sm text-gray-500">Utility-First Styling</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Zustand</span>
+                        <span class="text-sm text-gray-500">State Management</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">React Router</span>
+                        <span class="text-sm text-gray-500">Client-Side Routing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Backend & Infrastructure</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">FastAPI</span>
+                        <span class="text-sm text-gray-500">Modern Python API</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Neo4j</span>
+                        <span class="text-sm text-gray-500">Graph Database</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">LangChain</span>
+                        <span class="text-sm text-gray-500">AI Framework</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Docker</span>
+                        <span class="text-sm text-gray-500">Containerization</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-600">Python</span>
+                        <span class="text-sm text-gray-500">Backend Language</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Key Skills Demonstrated</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Full-Stack Development</h4>
+                    <ul class="text-gray-600 space-y-1">
+                        <li>• React frontend with TypeScript</li>
+                        <li>• FastAPI backend with async/await</li>
+                        <li>• RESTful API design and implementation</li>
+                        <li>• Real-time communication with SSE</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Modern Web Technologies</h4>
+                    <ul class="text-gray-600 space-y-1">
+                        <li>• Server-Sent Events for real-time updates</li>
+                        <li>• Graph database integration</li>
+                        <li>• AI/ML framework integration</li>
+                        <li>• Containerized deployment</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">Software Engineering</h4>
+                    <ul class="text-gray-600 space-y-1">
+                        <li>• Clean architecture and separation of concerns</li>
+                        <li>• Comprehensive error handling</li>
+                        <li>• Professional documentation</li>
+                        <li>• Testing and quality assurance</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-2 text-gray-700">UX/UI Design</h4>
+                    <ul class="text-gray-600 space-y-1">
+                        <li>• Responsive design with TailwindCSS</li>
+                        <li>• Interactive data visualization</li>
+                        <li>• Professional dashboard interface</li>
+                        <li>• Real-time user feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Development Process -->
+    <div class="py-12 px-8">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">Development Process</h2>
+        
+        <div class="space-y-8">
+            <div class="flex items-start space-x-4">
+                <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">1</div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Frontend Setup</h3>
+                    <p class="text-lg text-gray-600">Initialized React TypeScript project with TailwindCSS, routing, and state management using modern development tools.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+                <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">2</div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">UI Development</h3>
+                    <p class="text-lg text-gray-600">Built comprehensive dashboard, campaign management, knowledge graph visualization, reports, and settings pages with real-time features.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+                <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">3</div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Backend Integration</h3>
+                    <p class="text-lg text-gray-600">Developed FastAPI backend with Server-Sent Events streaming and integrated with existing Python agent ecosystem.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+                <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-semibold">4</div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Testing & Polish</h3>
+                    <p class="text-lg text-gray-600">Added comprehensive error handling, loading states, responsive design, and professional UX polish.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Project Structure</h3>
+            <div class="code-block">
+<pre><code>autonomous-redteam-agent/
+├── src/                    # React frontend
+│   ├── pages/             # Page components
+│   ├── store/             # Zustand state management
+│   └── components/        # Reusable components
+├── api/                   # FastAPI backend
+│   └── main.py           # API endpoints and SSE
+├── redteam_agent/         # Python agents
+│   ├── agents/           # AI agents (Recon, Intel, Defender)
+│   ├── tools/            # Safe tool wrappers
+│   ├── etl/              # Data ingestion pipeline
+│   └── utils/            # Safety controls and utilities
+├── portfolio/             # Portfolio website
+│   └── index.html        # Professional showcase
+└── docker/               # Container configuration</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- API Documentation -->
+    <div class="py-12 px-8">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">API Documentation</h2>
+        
+        <div class="space-y-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Campaign Management</h3>
+                <div class="code-block mb-3">
+<pre><code>POST /api/campaigns
+Content-Type: application/json
+
+{
+  "targets": ["172.18.0.0/16"],
+  "dry_run": true,
+  "simulation_only": true
+}
+
+Response: {
+  "message": "Campaign started in background",
+  "campaign_id": "uuid",
+  "status_url": "/api/campaigns/{id}"
+}</code></pre>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Real-Time Events</h3>
+                <div class="code-block mb-3">
+<pre><code>GET /api/campaigns/{campaign_id}/events
+Accept: text/event-stream
+
+# Server-Sent Events stream
+data: {"event_type": "CAMPAIGN_START", "agent": "Orchestrator", ...}
+data: {"event_type": "SCAN_ATTEMPT", "agent": "safe_nmap", ...}
+data: {"event_type": "INTEL_ANALYSIS", "agent": "IntelAgent", ...}</code></pre>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-3 text-gray-800">Knowledge Graph</h3>
+                <div class="code-block mb-3">
+<pre><code>GET /api/kg/assets
+
+Response: [
+  {
+    "asset_id": "asset-001",
+    "ip": "172.18.0.3",
+    "hostname": "web-server",
+    "software": [
+      {"product": "nginx", "version": "1.22.0"}
+    ],
+    "vulnerabilities": [
+      {"cve_id": "CVE-2023-1234", "cvss_v3": 7.5}
+    ]
+  }
+]</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Portfolio Summary -->
+    <div class="py-12 px-8">
+        <h2 class="text-4xl font-bold mb-8 text-gray-800">Portfolio Summary</h2>
+        
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Why This Project Stands Out</h3>
+            <ul class="text-lg text-gray-600 space-y-3 ml-6">
+                <li>• <strong>Full-Stack Expertise:</strong> Demonstrates both frontend and backend development skills with modern technologies</li>
+                <li>• <strong>Real-Time Features:</strong> Implements Server-Sent Events for live data streaming and user engagement</li>
+                <li>• <strong>AI Integration:</strong> Shows ability to work with AI frameworks and integrate them into practical applications</li>
+                <li>• <strong>Graph Database:</strong> Demonstrates understanding of complex data relationships and graph-based queries</li>
+                <li>• <strong>Professional Quality:</strong> Production-ready code with proper error handling, testing, and documentation</li>
+                <li>• <strong>Modern Architecture:</strong> Uses current industry-standard tools and follows best practices</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Technical Highlights</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-blue-50 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-blue-800">Frontend Excellence</h4>
+                    <ul class="text-blue-700 space-y-1">
+                        <li>• React 18 with TypeScript for type safety</li>
+                        <li>• TailwindCSS for modern, responsive design</li>
+                        <li>• Zustand for efficient state management</li>
+                        <li>• Real-time event streaming integration</li>
+                    </ul>
+                </div>
+                <div class="bg-green-50 rounded-lg p-6">
+                    <h4 class="text-lg font-semibold mb-3 text-green-800">Backend Architecture</h4>
+                    <ul class="text-green-700 space-y-1">
+                        <li>• FastAPI with async/await patterns</li>
+                        <li>• Server-Sent Events for real-time communication</li>
+                        <li>• Neo4j graph database integration</li>
+                        <li>• LangChain AI agent orchestration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-700">Ready for Production</h3>
+            <p class="text-lg text-gray-600 mb-4">
+                This project demonstrates the skills and knowledge required for modern software engineering roles:
+            </p>
+            <ul class="text-lg text-gray-600 space-y-2 ml-6">
+                <li>• Clean, maintainable code with proper documentation</li>
+                <li>• Modern development practices and tooling</li>
+                <li>• Full-stack development capabilities</li>
+                <li>• Real-time application development</li>
+                <li>• AI/ML integration experience</li>
+                <li>• Database design and optimization</li>
+                <li>• Professional UX/UI implementation</li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-12">
+            <div class="bg-gray-100 rounded-lg p-8">
+                <h3 class="text-2xl font-semibold mb-4 text-gray-800">Get Started</h3>
+                <p class="text-lg text-gray-600 mb-6">
+                    Clone the repository and experience the full-stack application:
+                </p>
+                <div class="code-block text-left">
+<pre><code>git clone https://github.com/ethanzhanghello/autonomous-redteam-agent.git
+cd autonomous-redteam-agent
+
+# Start the full-stack application
+make up          # Start Neo4j and lab environment
+make api         # Start FastAPI backend (Terminal 1)
+make frontend    # Start React frontend (Terminal 2)
+
+# Access the application
+Frontend: http://localhost:5173
+API Docs: http://localhost:8000/docs</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="gradient-bg text-white py-12 px-8">
+        <div class="text-center">
+            <h3 class="text-3xl font-bold mb-4">Ready to Explore?</h3>
+            <p class="text-xl mb-8 opacity-90">
+                This project demonstrates full-stack development skills with modern technologies 
+                and real-world cybersecurity applications.
+            </p>
+            <div class="text-lg opacity-75">
+                <p><strong>GitHub:</strong> github.com/ethanzhanghello/autonomous-redteam-agent</p>
+                <p class="mt-2">Built with ❤️ for cybersecurity education and lab environments only.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
